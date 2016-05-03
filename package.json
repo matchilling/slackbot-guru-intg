@@ -1,0 +1,10 @@
+{
+  "name"         : "slack-rank",
+  "version"      : "1.0.0",
+  "description"  : "Check slack rankings",
+  "main"         : "index.js",
+  "dependencies" : {
+    "pg"        : "^4.5.5",
+    "scrape-it" : "^1"
+  }
+}

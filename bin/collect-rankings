@@ -1,0 +1,31 @@
+#!/bin/bash
+# ------------------------------------------------------------------------------
+# COLLECT SLACK APP RANKINGS
+# ------------------------------------------------------------------------------
+cd "${BASH_SOURCE%/*}" || exit
+source util.sh
+
+validate_dependency node
+
+readonly script=`dirname "$PWD"`/index.js
+
+node $script "https://slack.com/apps/category/At0EFWTR6D-top-apps?sort=popularity" top-apps > "$export-top-apps.json"
+node $script "https://slack.com/apps/category/At0MQP5BEF-bots?sort=popularity" bots
+node $script "https://slack.com/apps/category/At0EFT6813-brilliant-bots?sort=popularity" brilliant-bots
+node $script "https://slack.com/apps/category/At0G5YTKU2-analytics?sort=popularity" analytics
+node $script "https://slack.com/apps/category/At0EFT6869-communication?sort=popularity" communication
+node $script "https://slack.com/apps/category/At0EFRCDQC-customer-support?sort=popularity" customer-support
+node $script "https://slack.com/apps/category/At0EFX4CCE-design?sort=popularity" design
+node $script "https://slack.com/apps/category/At0EFRCDNY-developer-tools?sort=popularity" developer-tools
+node $script "https://slack.com/apps/category/At0EFRCDPW-file-management?sort=popularity" file-management
+node $script "https://slack.com/apps/category/At0MRS55PA-health-medical?sort=popularity" health-medical
+node $script "https://slack.com/apps/category/At0EFT6893-hr?sort=popularity" hr
+node $script "https://slack.com/apps/category/At0EFRCDQU-marketing?sort=popularity" marketing
+node $script "https://slack.com/apps/category/At0EFT67V3-new-noteworthy?sort=popularity" new-noteworthy
+node $script "https://slack.com/apps/category/At0EFWTRAM-office-management?sort=popularity" office-management
+node $script "https://slack.com/apps/category/At0EFX9EF9-payments-accounting?sort=popularity" payments-accounting
+node $script "https://slack.com/apps/category/At0EFXUU6N-productivity?sort=popularity" productivity
+node $script "https://slack.com/apps/category/At0EFY3MJ4-project-management?sort=popularity" project-management
+node $script "https://slack.com/apps/category/At0EFWTRA5-security-compliance?sort=popularity" security-compliance
+node $script "https://slack.com/apps/category/At0EFXUU0J-social-fun?sort=popularity" social-fun
+node $script "https://slack.com/apps/category/At0QUNV823-travel?sort=popularity" travel
