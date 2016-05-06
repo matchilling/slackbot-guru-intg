@@ -9,7 +9,7 @@ validate_dependency node
 
 readonly script=`dirname "$PWD"`/index.js
 
-node $script "https://slack.com/apps/category/At0EFWTR6D-top-apps?sort=popularity" top-apps > "$export-top-apps.json"
+node $script "https://slack.com/apps/category/At0EFWTR6D-top-apps?sort=popularity" top-apps
 node $script "https://slack.com/apps/category/At0MQP5BEF-bots?sort=popularity" bots
 node $script "https://slack.com/apps/category/At0EFT6813-brilliant-bots?sort=popularity" brilliant-bots
 node $script "https://slack.com/apps/category/At0G5YTKU2-analytics?sort=popularity" analytics
